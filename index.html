@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Responsive website - Home</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://kit.fontawesome.com/8a3853c79f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<header>
+        <a href="index.html">
+            <img src="images/Scotiabank_logo.png">
+        </a>
+		<div class="topnav" id="myTopnav">
+			<a href="#section1">Ahorros</a>
+			<a href="#section2">Tarjetas</a>
+			<a href="#section3">Seguros</a>
+            <a href="#section4">Préstamos</a>
+			<a href="">Canales digitales</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		    	<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</header>
+	<main>
+		
+		<section style="background: #F9EEDF;">
+			<h2>Nosotros</h2>
+			<div class="container-02">
+				<div>
+					
+					<p>Banco líder en Canadá y un destacado proveedor de servicios financieros en las Américas, con una experiencia de seriedad y solidez de 188 años en el mundo.</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<article id="section1">
+			<h2>Cuentas de Ahorros</h2>
+			<div class="container-01">
+				<div>
+					<h3>Cuenta Free</h3>
+					<p>Cuenta transaccional cero mantenimiento</p>
+				</div>
+				<div>
+					<h3>Super Cuenta</h3>
+					<p>Gana S/.5,000 diarios y un departamento</p>
+				</div>
+				<div>
+					<h3>Cuenta Power</h3>
+					<p>Gana hasta el 8% de interés de tus ahorros</p>
+				</div>
+			</div>
+			</article>
+		</section>
+		<section>
+			<article id="section2"></article>
+			<h2>Tarjetas de Crédito</h2>
+			<div class="container-01">
+				<div>
+					<h3>Visa Clásica</h3>
+					<p>Bono de bienvenida de 2500 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Visa 0ro</h3>
+					<p>Bono de bienvenida de 3000 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Visa Platinum</h3>
+					<p>Bono de bienvenida de 4000 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Visa Signature</h3>
+					<p>Bono de bienvenida de 4500 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Visa Infinite</h3>
+					<p>Bono de bienvenida de 5000 Scotia Puntos</p>
+				</div>
+			</div>
+			</article>
+		</section>
+		<section>
+			<article id="section3"></article>
+			<h2>Seguros</h2>
+			<div class="container-01">
+				<div>
+					<h3>Protección de Tarjetas</h3>
+					<p>Bono de bienvenida de 2500 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Seguro de Vida</h3>
+					<p>Bono de bienvenida de 2500 Scotia Puntos</p>
+				</div>
+				<div>
+					<h3>Seguro contra Accidentes</h3>
+					<p>Bono de bienvenida de 3000 Scotia Puntos</p>
+				</div>
+			</article>
+		</section>
+	</main>
+	<i class="fa-brands fa-square-whatsapp fa-2xl enlace-icono" style="color: #29db47;"></i>
+	<footer>
+		<p class="p-footer">2024. Todos los derechos reservados.</p>
+	</footer>
+	<!-- JS PARA MENU SUPERIOR -->
+	<script type="text/javascript">
+		function myFunction() {
+  			var x = document.getElementById("myTopnav");
+  			if (x.className === "topnav") {
+    			x.className += " responsive";
+  			} else {
+    		x.className = "topnav";
+  			}
+		}
+	</script>
+</body>
+</html>
