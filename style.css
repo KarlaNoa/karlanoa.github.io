@@ -1,17 +1,96 @@
 *{
     margin: 0;
     padding: 0;
+	box-sizing: border-box;
+	font-family:Arial, Helvetica, sans-serif;
 }
+
 body {
-	background: #EC0712;
+	background-color: #ec0712;
 }
+
+.slider-box{
+	width: 1280px;
+	height: auto;
+	margin: 50px auto 0;
+	overflow: hidden;
+}
+
+.slider-box ul{
+	display: flex;
+	padding: 0;
+	width: 140%;
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-box li{
+	width: 100%;
+	list-style: none;
+	position: relative;
+}
+
+.texto{
+	position: absolute;
+	text-align: center;
+	padding: 0 100px;
+	top: 100px;
+}
+
+.texto h2{
+	font-size: 45px;
+	text-shadow: 5px 3px 3px #140d00;
+	margin-bottom: 35px;
+	color: #F9EEDF;
+}
+
+.texto p{
+	font-size: 25px;
+	text-shadow: 5px 3px 3px #140d00;
+	color: white;
+	
+}
+
+.slider-box img{
+	width: 100%;
+}
+
+@keyframes slide{
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+
+}
+
+@media(max-width:991px){
+	.slider-box{
+		width: 100%;
+	}
+
+	.texto{
+		top: 50px;
+		padding: 0;
+	}
+
+	.texto h2{
+		font-size: 45px;
+		margin-bottom: 35px;
+	}
+
+	.texto p{
+		font-size: 15px;
+	}
+}
+	
 /* == ESTRUCTURA == */
+
 header {
 	width: 80%;
 	height: auto;
 	margin: 0 auto;
 	padding: 1% 0;
-	background-color: #fff;
+	background-color: #FFFFFF;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -63,13 +142,44 @@ section p {
 	font-size: 0.9rem;
 	line-height: 1.3rem;
 }
-/* ==  MENU SUPERIOR == */
-	/* Add a black background color to the top navigation */
+#comment-box {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#comments-list {
+    margin-bottom: 10px;
+}
+
+#comment-input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+#comment-input:hover {
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
 	.topnav {
 		overflow: hidden;
 		margin: 0 30px;
 	}
-	/* Style the links inside the navigation bar */
+
 	.topnav a {
 		float: left;
 		display: block;
@@ -84,22 +194,22 @@ section p {
 		transition-duration: 10ms;
 		transition-timing-function: ease;
 	}
-	/* Change the color of links on hover */
+
 	.topnav a:hover {
 		color: #FFFFFF;
 		background: #ec0712;
         border-radius: 25px;
 	}
-	/* Add an active class to highlight the current page */
+
 	.topnav a.active {
 		background-color: #04AA6D;
 		color: white;
 	}
-	/* Hide the link that should open and close the topnav on small screens */
+
 	.topnav .icon {
 		display: none;
 	}
-	/* When the screen is less than 768 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
 	@media screen and (max-width: 768px) {
 		.topnav {
 			width: 100%;
@@ -113,7 +223,7 @@ section p {
 	    	display: block;
 	  	}
 	}
-	/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
 	@media screen and (max-width: 768px) {
 		.topnav.responsive {
 	  		position: relative;
@@ -129,8 +239,7 @@ section p {
 	    	text-align: left;
 	  	}
 	}
-/* == FIN DE MENU SUPERIOR == */
-/* == SLIDE == */
+
 #intro {
 	display: flex;
 	flex-direction: column;
@@ -178,7 +287,7 @@ section p {
 	width: 84%;
 
 }
-/* == BOTONES == */
+
 a.boton {
 	color: #fff;
 	background: #00833D;
@@ -198,7 +307,7 @@ a.boton:hover {
 	color: #00833D;
 	background: #000;
 }
-/* == CONTENEDORES FLEX == */
+
 .container-01, .container-02 {
 	display: flex;
 	flex-direction: row;
@@ -217,9 +326,9 @@ a.boton:hover {
 	margin: 1%;
 	padding: 1%;
 }
-/* == TIPOGRAFÍAS == */
+
 :root {
-	font-size: 20px; /* MEDIDA BASE: 20px = 1rem */
+	font-size: 20px; 
 }
 @font-face {
 	font-family: miFuente01;
@@ -257,25 +366,20 @@ p {
 	font-size: 0.8rem;
 	line-height: 1.2rem;
 }
-/* ==ICONOS == */
+
 .enlace-icono {
 	position: fixed;
 	bottom: 140px;
 	right: 15px;
 }
 
-/* == VIDEO == */
-.container-02 video {
-	border-radius: 15px;
-	width: 84%;
-}
 .container {
 position: relative;
 overflow: hidden;
 width: 100%;
-padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+padding-top: 56.25%; 
 }	  
-/* Then style the iframe to fit in the container div with full height and width */
+
 .responsive-iframe {
 position: absolute;
 top: 0;
@@ -288,13 +392,13 @@ border: 0;
 margin: 0 auto;
   }
 
-/* == IMAGENES == */
+
 .container-01 > div img, .container-02 > div img {
 	width: 100%;
 	box-shadow: 5px 5px 4px rgb(170, 170, 170);
 	border-radius: 25px 0;
 }
-/*== FORMULARIO ==*/
+
 form{
 	display: flex;
 	margin: 0 auto;
@@ -336,7 +440,7 @@ textarea{
 }
 input[type=submit]{
 	color: #fff;
-	background: #00833D;
+	background: #EC0712;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 700;
 	text-align: center;
@@ -356,7 +460,7 @@ input[type=submit]:hover{
 	color: #00833D;
 	background: #000;
 }
-/*== TABLAS ==*/
+
 table, tr , td, th{
 	border: 1px solid #4F4F4F;
 	padding: 4px 10px;

@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Responsive website - Home</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,49 +12,65 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://kit.fontawesome.com/8a3853c79f.js" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 </head>
 <body>
 	<header>
-        <a href="index.html">
-            <img src="images/Scotiabank_logo.png">
-        </a>
-		<div class="topnav" id="myTopnav">
-			<a href="#section1">Ahorros</a>
-			<a href="#section2">Tarjetas</a>
-			<a href="#section3">Seguros</a>
-            <a href="#section4">Préstamos</a>
-			<a href="">Canales digitales</a>
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-		    	<i class="fa fa-bars"></i>
+		<div>
+			<a href="index.html">
+				<img src="images/Scotiabank_logo.png">
 			</a>
 		</div>
+	<div class="topnav" id="myTopnav">
+		<a href="#section1">Cuentas de Ahorros</a>
+		<a href="#section2">Tarjetas de Crédito</a>
+		<a href="#section3">Seguros</a>
+		<a href="#section4">Sugerencias</a>
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+			<i class="fa fa-bars"></i>
+		</a>
+	</div>
 	</header>
 	<main>
-		
-		<section style="background: #F9EEDF;">
-			<h2>Nosotros</h2>
-			<div class="container-02">
-				<div>
-					
-					<p>Banco líder en Canadá y un destacado proveedor de servicios financieros en las Américas, con una experiencia de seriedad y solidez de 188 años en el mundo.</p>
-				</div>
-			</div>
-		</section>
+		<div class="slider-box">
+			<ul>
+				<li>
+					<img src="images/scotiabank-peru.jpg" alt="">
+					<div class="texto">
+						<h2>Nosotros</h2>
+						<p>
+							Banco líder en Canadá y un destacado proveedor de servicios financieros en las Américas,
+					 		con una experiencia de seriedad y solidez de 188 años en el mundo.
+						</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/1573321946711.jpeg" alt="">
+				</li>
+			</ul>
+			
+		</div>
+	
 		<section>
 			<article id="section1">
 			<h2>Cuentas de Ahorros</h2>
 			<div class="container-01">
 				<div>
 					<h3>Cuenta Free</h3>
-					<p>Cuenta transaccional cero mantenimiento</p>
+					<p>Cuenta transaccional cero mantenimiento. 
+						Puedes tener en ambas monedas soles y dólares.</p>
 				</div>
 				<div>
 					<h3>Super Cuenta</h3>
-					<p>Gana S/.5,000 diarios y un departamento</p>
+					<p>Gana S/.5,000 diarios y un departamento.
+						Puedes tener en ambas monedas soles y dólares.
+					</p>
 				</div>
 				<div>
 					<h3>Cuenta Power</h3>
-					<p>Gana hasta el 8% de interés de tus ahorros</p>
+					<p>Gana hasta el 8% de interés de tus ahorros.
+						Puedes tener en ambas monedas soles y dólares.
+					</p>
 				</div>
 			</div>
 			</article>
@@ -91,18 +108,37 @@
 			<div class="container-01">
 				<div>
 					<h3>Protección de Tarjetas</h3>
-					<p>Bono de bienvenida de 2500 Scotia Puntos</p>
+					<p>Es un seguro que protege el dinero de todas tus tarjetas en caso de robo, asalto, extravío, fraudes y más, tanto para tus tarjetas Scotiabank</p>
 				</div>
 				<div>
 					<h3>Seguro de Vida</h3>
-					<p>Bono de bienvenida de 2500 Scotia Puntos</p>
+					<p>Asegura la diversión en familia, protégete con un seguro de vida por S/19.90 al mes, te cubre en caso de fallecimiento y por incapacidad total o permanente.</p>
 				</div>
 				<div>
 					<h3>Seguro contra Accidentes</h3>
-					<p>Bono de bienvenida de 3000 Scotia Puntos</p>
+					<p>Cuidamos tus pasos y te ofrecemos seguros contra accidentes tan completos como confiables. Elige el plan a tu medida para esos días en que algo sale mal.</p>
 				</div>
 			</article>
 		</section>
+		<section style="background: #F9EEDF;">
+			<article id="section4"></article>
+			<h2>Sugerencias</h2>
+		<div>
+			<form onsubmit="return valida()">
+				<label for="nombre">Nombre y Apellido:</label>
+				<input type="text" id="nombre" name="nombre">
+				<span id="errorNombre" class="error"></span>
+				<br>
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email">
+				<span id="errorEmail" class="error"></span>
+				<br>
+					<label>Sugerencias:</label>
+					<div id="comments-list"></div>
+					<textarea id="comment-input" placeholder="Escribe un comentario..."></textarea>
+					<button onclick="agregarComentario()" ondblclick="return valida()">Agregar Comentario</button>
+			 </form>
+		</div>
 	</main>
 	<i class="fa-brands fa-square-whatsapp fa-2xl enlace-icono" style="color: #29db47;"></i>
 	<footer>
